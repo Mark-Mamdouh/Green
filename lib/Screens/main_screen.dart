@@ -20,6 +20,8 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
+
+  // initial plants List
   List<Widget> plants = [
     PlantCard("IN_anthurium"),
     PlantCard("IN_begonia"),
@@ -33,6 +35,7 @@ class _MainScreenState extends State<MainScreen> {
   ];
   place selectedPlace = place.indoor;
 
+  // change List according to clicked place
   void changeList(place p) {
     setState(() {
       if (p == place.indoor) {
@@ -130,6 +133,7 @@ class _MainScreenState extends State<MainScreen> {
                       "Green",
                       style: kTitleTextStyle,
                     ),
+                    // purchase button
                     GestureDetector(
                       onTap: () {
                         Fluttertoast.showToast(
@@ -160,6 +164,7 @@ class _MainScreenState extends State<MainScreen> {
               child: Container(
                 child: Row(
                   children: [
+                    // side panel
                     Expanded(
                       flex: 1,
                       child: Container(
@@ -240,6 +245,7 @@ class _MainScreenState extends State<MainScreen> {
                         ),
                       ),
                     ),
+                    // main List of plants
                     Expanded(
                       flex: 3,
                       child: Container(

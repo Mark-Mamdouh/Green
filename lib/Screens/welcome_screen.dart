@@ -10,6 +10,7 @@ class WelcomeScreen extends StatelessWidget {
           children: [
             Expanded(
               flex: 1,
+              // image container
               child: Container(
                 color: Colors.greenAccent,
                 child: Image(
@@ -38,6 +39,7 @@ class WelcomeScreen extends StatelessWidget {
                         fontSize: 20,
                       ),
                     ),
+                    // next button
                     GestureDetector(
                       onTap: () {
                         Navigator.push(context,

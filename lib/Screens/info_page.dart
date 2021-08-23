@@ -32,6 +32,7 @@ class InfoPage extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
+                  // back button
                   GestureDetector(
                     child: Icon(
                       FontAwesomeIcons.longArrowAltLeft,
@@ -40,6 +41,7 @@ class InfoPage extends StatelessWidget {
                       Navigator.pop(context);
                     },
                   ),
+                  // purchase button
                   GestureDetector(
                     child: Icon(
                       FontAwesomeIcons.shoppingCart,
@@ -61,6 +63,7 @@ class InfoPage extends StatelessWidget {
                 child: Row(
                   children: [
                     Expanded(
+                      // image container
                       child: Container(
                         decoration: BoxDecoration(
                             color: color,
@@ -74,6 +77,7 @@ class InfoPage extends StatelessWidget {
                         height: double.infinity,
                       ),
                     ),
+                    // details area
                     Expanded(
                       child: Container(
                         child: Padding(
@@ -162,6 +166,7 @@ class InfoPage extends StatelessWidget {
                         '${plantName[3].toUpperCase()}${plantName.substring(4)}',
                         style: kInfoTitleTextStyle,
                       ),
+                      // plant details
                       Expanded(
                         flex: 3,
                         child: Text(
@@ -177,6 +182,7 @@ class InfoPage extends StatelessWidget {
                               plantDetails[4],
                               style: kDataTextStyle,
                             ),
+                            // buy button
                             GestureDetector(
                               onTap: () {
                                 Fluttertoast.showToast(

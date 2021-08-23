@@ -8,6 +8,7 @@ class PlantCard extends StatelessWidget {
 
   PlantCard(String text) {
     this.text = text;
+    // generate random color
     color =
         Color((math.Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(1.0);
   }
@@ -37,6 +38,7 @@ class PlantCard extends StatelessWidget {
             Positioned(
               bottom: 45,
               child: Text(
+                // get right text
                 '${text[3].toUpperCase()}${text.substring(4)}',
                 style: TextStyle(
                   fontSize: 25,

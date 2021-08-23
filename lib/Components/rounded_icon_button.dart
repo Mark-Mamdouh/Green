@@ -15,18 +15,19 @@ class RoundIconButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return RawMaterialButton(
       child: Icon(
-        // FontAwesomeIcons.shoppingBag,
         FontAwesomeIcons.infoCircle,
         color: Colors.white,
         size: 25,
       ),
       onPressed: () {
+        // go to info page and send details to it
         Navigator.push(context, MaterialPageRoute(builder: (context) {
           return InfoPage(text, color);
         }));
       },
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       fillColor: Color.fromRGBO(22, 24, 44, 1),
+      // set size of the box
       constraints: BoxConstraints.tightFor(
         width: 50,
         height: 50,
